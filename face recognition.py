@@ -34,9 +34,9 @@ while True:
         if matches[min_index] == True:
             name = known_face_names[min_index]
 
-        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)  #drow rectangle
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2) 
         font = cv2.FONT_HERSHEY_SIMPLEX #font kind
-        cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1) #location text
+        cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
         
     cv2.imshow('viewer', frame)
     key = cv2.waitKey(100)
