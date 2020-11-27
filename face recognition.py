@@ -1,6 +1,6 @@
-import face_recognition   #DLIB
-import cv2    #OPENCV
-#import numpy as np 
+import face_recognition  
+import cv2  
+import numpy as np 
 
 cam  = cv2.VideoCapture(0)   #open camira
 image_paths = ["img1.jpg", "img2.jpg" ] 
