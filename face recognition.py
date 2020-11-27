@@ -3,7 +3,7 @@ import cv2    #OPENCV
 #import numpy as np 
 
 cam  = cv2.VideoCapture(0)   #open camira
-image_paths = ["profile_image.jpg", "radwa.jpg" ]   #list
+image_paths = ["img1.jpg", "img2.jpg" ] 
 known_face_names = ["Norhan", 'radwa']
 known_face_encodings = []
 for image_path in image_paths:
@@ -35,7 +35,7 @@ while True:
             name = known_face_names[min_index]
 
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2) 
-        font = cv2.FONT_HERSHEY_SIMPLEX #font kind
+        font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
         
     cv2.imshow('viewer', frame)
